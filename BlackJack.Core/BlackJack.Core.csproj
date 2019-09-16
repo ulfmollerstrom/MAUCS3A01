@@ -44,6 +44,7 @@
     <Compile Include="Common\EnumerableExtensions.cs" />
     <Compile Include="Common\DeckAndCardMethods.cs" />
     <Compile Include="Factories\GameFactories.cs" />
+    <Compile Include="Game\Game.cs" />
     <Compile Include="Game\GameMethods.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Enums\EnumExtensions.cs" />

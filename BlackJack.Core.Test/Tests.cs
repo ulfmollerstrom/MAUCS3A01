@@ -5,11 +5,8 @@
 
 //https://en.wikipedia.org/wiki/Blackjack
 
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Media;
-using BlackJack.Core.Common;
 using BlackJack.Core.Enums;
 using BlackJack.Core.Infrastucture;
 using BlackJack.Core.Player;
@@ -218,8 +215,12 @@ namespace BlackJack.Core.Test
         public void RunGameStart()
         {
             //-- Arrange
-            var game = new Game.Game();
-            var player = new Player.Player();
+
+            var game = new Game.Game
+            {
+                Players = new List<Player.Player> { new Player.Player { Name = "Nisse" } },
+                Shoe = ShoeFactory(NumberOfDecksInShoe.Is8)
+            };
 
             //-- Act
 
@@ -229,12 +230,5 @@ namespace BlackJack.Core.Test
         }
 
 
-    }
-}
-
-namespace BlackJack.Core.Game
-{
-    public class Game
-    {
     }
 }

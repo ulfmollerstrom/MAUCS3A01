@@ -22,7 +22,7 @@ namespace BlackJack.Core.Infrastucture
         {
             var playingcards = new List<PlayingCard>();
             playingcards.AddRange(shoe);
-            playingcards.Random();
+            playingcards.Randomize();
             shoe = new Stack<PlayingCard>(playingcards);
         }
 

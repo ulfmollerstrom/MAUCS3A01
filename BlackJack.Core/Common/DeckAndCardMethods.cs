@@ -10,10 +10,10 @@ namespace BlackJack.Core.Common
 {
     public static class DeckAndCardMethods
     {
-        public static IEnumerable<PlayingCard> ShuffleCards(IEnumerable<PlayingCard> deckOfCards)
+        public static IEnumerable<PlayingCard> ShuffleCards(IEnumerable<PlayingCard> cards)
         {
-            var tmp = deckOfCards as IList<PlayingCard>;
-            return tmp.Random();
+            var tmp = cards as IList<PlayingCard>;
+            return tmp.Randomize();
         }
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace BlackJack.Core.Common
         /// Method that creates a dynamic playingcard, with the same props
         /// </summary>
         /// <param name="card">the card to convert</param>
-        /// <returns>a dynamic playingcard</returns>
+        /// <returns>a dynamic representation of the playingcard</returns>
         private static dynamic DynamicPlayingCard(PlayingCard card)
         {
             return new {card.Suite, card.Card, card.Value};

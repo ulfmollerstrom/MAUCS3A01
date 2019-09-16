@@ -10,7 +10,7 @@ namespace BlackJack.Core.Common
 {
     public static class EnumerableExtensions
     {
-        public static IEnumerable<T> Random<T>(this IEnumerable<T> enumerable)
+        public static IEnumerable<T> Randomize<T>(this IEnumerable<T> enumerable)
         {
             if (enumerable == null)
                 throw new ArgumentNullException(nameof(enumerable));

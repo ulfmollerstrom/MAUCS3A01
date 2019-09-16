@@ -11,8 +11,10 @@ namespace BlackJack.Core.Player
     {
         private readonly Hand hand = new Hand();
 
+        public string Name { get; set; }
         public bool Stand { get; set; } = false;
         public bool IsBust => Score > 21;
+        public bool HasBlackJack => Score == 21;
         public int Score => hand.Score;
 
         public void TakeCard(PlayingCard playingCard)
