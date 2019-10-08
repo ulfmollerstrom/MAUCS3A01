@@ -3,6 +3,8 @@
 //MAUCS3A01: "Blackjack Game"
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using BlackJack.Core.Infrastucture;
 
 namespace BlackJack.Core.Player
@@ -16,6 +18,8 @@ namespace BlackJack.Core.Player
         public bool IsBust => Score > 21;
         public bool HasBlackJack => Score == 21;
         public int Score => hand.Score;
+        public Guid Id { get; } = Guid.NewGuid();
+        public IList<PlayingCard> Hand => new List<PlayingCard>(hand);
 
         public void TakeCard(PlayingCard playingCard)
         {
@@ -28,9 +32,7 @@ namespace BlackJack.Core.Player
                 throw new ArgumentNullException(nameof(playingCards));
 
             foreach (var playingCard in playingCards)
-            {
                 TakeCard(playingCard);
-            }
         }
 
     }

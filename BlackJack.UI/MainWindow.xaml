@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlackJack.UI"
         mc:Ignorable="d"
-        Title="Black Jackish" Height="450" Width="800">
-    <Grid/>
+        Title="Black Jackish" Height="709.092" Width="1001.136">
+    <Grid Name="aGrid"></Grid>
 </Window>

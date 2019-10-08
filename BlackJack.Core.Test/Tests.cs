@@ -218,6 +218,7 @@ namespace BlackJack.Core.Test
 
             var game = new Game.Game
             {
+                Dealer = new Dealer(),
                 Players = new List<Player.Player> { new Player.Player { Name = "Nisse" } },
                 Shoe = ShoeFactory(NumberOfDecksInShoe.Is8)
             };

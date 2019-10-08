@@ -50,6 +50,7 @@
     <Compile Include="Enums\EnumExtensions.cs" />
     <Compile Include="Exceptions\NotEnoughCardsExeption.cs" />
     <Compile Include="Factories\Factories.cs" />
+    <Compile Include="Player\Dealer.cs" />
     <Compile Include="Player\Hand.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Infrastucture\PlayingCard.cs" />
