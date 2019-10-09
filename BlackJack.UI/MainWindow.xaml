@@ -1,10 +1,38 @@
-﻿<Window x:Class="BlackJack.UI.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlackJack.UI"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" x:Class="BlackJack.UI.MainWindow"
         mc:Ignorable="d"
-        Title="Black Jackish" Height="709.092" Width="1001.136">
-    <Grid Name="aGrid"></Grid>
+        Title="Black Jackish" Height="700" Width="1000">
+    <Window.Resources>
+        <Style BasedOn="{StaticResource {x:Type ToggleButton}}" TargetType="{x:Type RadioButton}">
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Background" Value="AntiqueWhite"/>
+            <Setter Property="Foreground" Value="Green"/>
+            <Setter Property="Width" Value="50"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="FontFamily" Value="Trebuchet MS"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="AntiqueWhite"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="MaxWidth" Value="100"/>
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="Grid" Background="Green">
+        <StackPanel Name="GamePanel" Orientation="Vertical" VerticalAlignment="Bottom">
+            <StackPanel x:Name="DealerPanel" Orientation="Vertical" HorizontalAlignment="Center" Height="100" VerticalAlignment="Center">
+                <Button x:Name="Deal" Content="Deal!" HorizontalAlignment="Center" Click="Deal_OnClick">
+                </Button>
+            </StackPanel>
+            <StackPanel x:Name="PlayersPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom"></StackPanel>
+
+        </StackPanel>
+    </Grid>
 </Window>

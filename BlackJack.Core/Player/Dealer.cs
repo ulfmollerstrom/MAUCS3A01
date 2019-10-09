@@ -6,7 +6,6 @@ namespace BlackJack.Core.Player
     {
         public new string Name { get; } = "Dealer";
 
-        public PlayingCard Deal(Shoe shoe)
-            => shoe.DealCard();
+        public PlayingCard Deal(Shoe shoe) => shoe.DealCard();
     }
 }
