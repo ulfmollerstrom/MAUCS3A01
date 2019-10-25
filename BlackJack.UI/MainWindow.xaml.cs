@@ -75,11 +75,12 @@ namespace BlackJack.UI
                 .ToDictionary(player => player.Id, player =>
                     new StackPanel
                     {
-                        HorizontalAlignment = HorizontalAlignment.Left,
-                        VerticalAlignment = VerticalAlignment.Top,
+                        //HorizontalAlignment = HorizontalAlignment.Left,
+                        //VerticalAlignment = VerticalAlignment.Top,
                         Margin = new Thickness(10, 0, 0, 20)
                     });
 
+            Players.Items.Clear();
             foreach (var player in game.Players)
             {
                 panels[player.Id].Children.Clear();
@@ -87,10 +88,11 @@ namespace BlackJack.UI
                 AddNameLabel(panels[player.Id], player);
                 AddChoice(panels[player.Id], player);
                 AddRange(panels[player.Id], images[player.Id]);
+                Players.Items.Add(new TabItem { Header = player.Name, Content = panels[player.Id] });
             }
 
-            PlayersPanel.Children.Clear();
-            AddRange(PlayersPanel, panels.Values);
+            //PlayersPanel.Children.Clear();
+            //AddRange(PlayersPanel, panels.Values);
         }
 
         private void AddNameLabel(Panel panel, Player player)
