@@ -26,13 +26,17 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="Grid" Background="Green">
-        <StackPanel Name="GamePanel" Orientation="Vertical" VerticalAlignment="Bottom">
-            <StackPanel x:Name="DealerPanel" Orientation="Vertical" HorizontalAlignment="Center" Height="100" VerticalAlignment="Center">
-                <Button x:Name="Deal" Content="Deal!" HorizontalAlignment="Center" Click="Deal_OnClick">
-                </Button>
+        <StackPanel Name="GamePanel" Orientation="Vertical" VerticalAlignment="Top">
+            <StackPanel x:Name="DealerPanel" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,1,0">
+                <Button x:Name="Deal" Content="Deal!" HorizontalAlignment="Center" Click="Deal_OnClick"/>
             </StackPanel>
-            <StackPanel x:Name="PlayersPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom"></StackPanel>
-
+            <StackPanel x:Name="PlayersPanel" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <DockPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <TabControl DockPanel.Dock="Right" x:Name="Players" Background="Green" Margin="0,0,0,0">
+                        <TabItem Header="Oleg"/>
+                    </TabControl>
+                </DockPanel>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>
