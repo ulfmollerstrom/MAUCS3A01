@@ -53,18 +53,7 @@ namespace BlackJack.UI
             foreach (var player in game.Players)
                 DealTwoCardsToPlayer(game.Shoe, player);
 
-            //panels = game.Players
-            //    .ToDictionary(player => player.Id, player =>
-            //        new StackPanel
-            //        {
-            //            HorizontalAlignment = HorizontalAlignment.Left,
-            //            VerticalAlignment = VerticalAlignment.Top,
-            //            Margin = new Thickness(10, 0, 0, 20)
-            //        });
-
             SetupPlayerPanels();
-
-            //AddRange(PlayersPanel, panels.Values);
 
 
         }

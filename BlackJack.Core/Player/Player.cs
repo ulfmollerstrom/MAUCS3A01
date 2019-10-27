@@ -23,8 +23,8 @@ namespace BlackJack.Core.Player
 
         public void TakeCard(PlayingCard playingCard)
         {
-            if (Stand.HasValue && Stand==true) return;
-            if (Stand.HasValue) Stand = null;
+            if (Stand.HasValue && Stand == true) return;
+            if (Stand.HasValue && Stand == false) Stand = null;
             hand.Add(playingCard);
         }
 
